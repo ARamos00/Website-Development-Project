@@ -18,9 +18,10 @@
                 <img src="Images/logo.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html#services">Projects</a></li>
-                    <li><a href="gallery.html#portfolio">Gallery</a></li>
-                    <li><a href="contact.html#contact">Contact</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Projects</a></li>
+                    <li><a href="#portfolio">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-x" onclick="closeMenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openMenu()"></i>
@@ -32,9 +33,9 @@
         </div>
     </div>
 
-     <!--About Section-->
+    <!--About Section-->
 
-     <div id="about">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -84,11 +85,113 @@
         </div>
     </div>
 
-    <div class="copyright">
-        <p>
-            Copyrighted by Adrian Ramos <i class="fa-regular fa-copyright"></i>
-        </p>
+    <!-- Services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Dog Walking App</h2>
+                    <p>An Android application that tracks the distance traveled, start time, and end time of walks
+                        performed by
+                        the user. Aggregates users data and offers user statistics' based on their data. Integrated
+                        Firebase's Real-time
+                        Database for storing user walk data. Implemented Login/Logout flow utilizing Google Auth API</p>
+                    <a>Java , Android Studio , Firebase</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Spotify Music Recommendation App</h2>
+                    <p>A desktop application that connects to the user's Spotify account. Prompts the user to choose
+                        genres of music they may be interested in. Creates a playlist for the
+                        user based on users' data and specified options selected
+                        by the user.</p>
+                    <a>C++ , Qt</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Portfolio -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Pictures of Peluchin</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/67944126553__6119D101-E31E-4255-9408-380CA454BA42.jpg" alt="Peluchin with Me.">
+                    <div class="layer">
+                        <h3>Peluchin with Me.</h3>
+                        <!-- <p></p> -->
+                        <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/IMG_4387.jpg" alt="Peluchin Smiling">
+                    <div class="layer">
+                        <h3>Peluchin Smiling</h3>
+                        <!-- <p></p> -->
+                        <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/IMG_4769.jpg" alt="Peluchin laying his head next to a croc">
+                    <div class="layer">
+                        <h3>Peluchin laying his head next to a croc</h3>
+                        <!-- <p></p> -->
+                        <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/IMG_5334.jpg" alt="Peluchin sitting next to his racoon">
+                    <div class="layer">
+                        <h3>Peluchin sitting next to his racoon</h3>
+                        <!-- <p></p> -->
+                        <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="btn"> See More </a> -->
+
+        </div>
+    </div>
+
+
+    <!-- Contact -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-envelope"></i> adrian.ramos@csueastbay.edu</p>
+                    <p> <i class="fa-solid fa-phone"></i> 925-595-4209</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/ARamos00"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ARMS00"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Images/Adrian's Resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copyright">
+            <p>
+                Copyrighted by Adrian Ramos <i class="fa-regular fa-copyright"></i>
+            </p>
+        </div>
     </div>
 
     <script>
@@ -119,6 +222,25 @@
             sideMenu.style.right = "-200px"
         }
 
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwVlhPYNrtenSN_47fydRavsSCiw4H7JyWIyV7LqY_VM_L7O4MpI8Bzo9TfxCAtAgO1/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
 </body>
