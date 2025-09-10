@@ -17,7 +17,6 @@ Basic portfolio site I built for class. It’s a static front-end (no framework)
 
 ## Tech
 
-* **HTML + CSS** (no JS build tooling) — repo is \~72% HTML / \~28% CSS.
 * Hosted via **GitHub Pages** from this repo.
 
 ---
