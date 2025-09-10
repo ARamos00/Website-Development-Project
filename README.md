@@ -2,23 +2,23 @@
 
 Basic portfolio site I built for class. It’s a static front-end (no framework) with pages for **Home**, **Projects**, **Gallery**, and **Contact**, and it’s published with **GitHub Pages**.
 
-**Live site:** [https://aramos00.github.io/Website-Development-Project/](https://aramos00.github.io/Website-Development-Project/) ([GitHub][1])
+**Live site:** [https://aramos00.github.io/Website-Development-Project/](https://aramos00.github.io/Website-Development-Project/)
 
 ---
 
 ## What’s here
 
-* **Home / About** with a short bio, skills, and experience/education sections. ([Aremos][2])
-* **Projects** page highlighting two apps (Dog Walking App, Spotify Music Recommendation). ([Aremos][3])
-* **Gallery** page (photos of Peluchin). ([Aremos][4])
-* **Contact** page with email, phone, and a resume link. ([Aremos][5])
+* **Home / About** with a short bio, skills, and experience/education sections.
+* **Projects** page highlighting two apps (Dog Walking App, Spotify Music Recommendation).
+* **Gallery** page (photos of Peluchin).
+* **Contact** page with email, phone, and a resume link.
 
 ---
 
 ## Tech
 
-* **HTML + CSS** (no JS build tooling) — repo is \~72% HTML / \~28% CSS. ([GitHub][1])
-* Hosted via **GitHub Pages** from this repo. ([GitHub][1])
+* **HTML + CSS** (no JS build tooling) — repo is \~72% HTML / \~28% CSS.
+* Hosted via **GitHub Pages** from this repo.
 
 ---
 
@@ -49,15 +49,4 @@ npx serve .
 ├─ style.css         # Main styles
 ├─ style.min.css     # Minified styles
 └─ Images/           # Site images
-```
 
-([GitHub][1])
-
----
-
-## Notes
-
-* Pure front-end; keep content editable directly in the HTML files.
-* Images live under `/Images` and are referenced by the pages. ([GitHub][6])
-
----
